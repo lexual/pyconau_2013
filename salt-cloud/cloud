@@ -1,0 +1,17 @@
+minion:
+  master: salt.lexual.com
+
+providers:
+  lexual-aws-config:
+    id: XXXXXXXXXXXXXXXXXXX
+    key: 'secrets'
+    securitygroup: salt-minion
+    keyname: py_salt
+    private_key: /home/ubuntu/.ssh/py_salt.pem
+    ssh_username: ubuntu
+    provider: aws
+    ssh_interface: private_ips
+    location: ap-southeast-2  # Sydney.
+
+        
+    

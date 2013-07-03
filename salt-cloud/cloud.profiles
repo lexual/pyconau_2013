@@ -1,0 +1,12 @@
+djangoproject:
+  provider: lexual-aws-config
+  image: ami-37c0530d                                                              
+  size: Medium Instance                                                            
+  ssh-user: ubuntu                                                                 
+  security-group:                                                                  
+    - salt-minion                                                                  
+    - web                                                                          
+  minion:
+    grains:
+      is_dev: False
+      role: djangoproject
