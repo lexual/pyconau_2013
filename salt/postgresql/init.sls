@@ -5,7 +5,7 @@ postgresql:
     - enabled: True
 
 
-{% for db in ['vagrant', 'djangoproject', 'code.djangoproject'] %}
+{% for db in ['djangoproject', 'code.djangoproject'] %}
 {{ db }}:
     postgres_user.present:
         - password: {{ db }}

@@ -14,7 +14,6 @@ pip-dependencies:
 virtualenv-pip-install:
   virtualenv.manage:
     - name: /home/{{ pillar['user'] }}/.virtualenvs/{{ pillar['virtualenv_name'] }}
-    #- system_site_packages: True
     - system_site_packages: False
     - runas: {{ pillar['user'] }}
     - requirements: {{ pillar['code_dir'] }}/deploy-requirements.txt
